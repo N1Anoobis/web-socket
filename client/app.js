@@ -35,19 +35,19 @@ function addMessage(author, content) {
     message.classList.add('message--received');
     message.classList.add('message');
 
-   if (author === userName){
-    message.classList.add('message--self');
-   }
-   const h3 = document.createElement("h3");
-   h3.classList.add('message__author');
-  author === userName ? h3.innerText = 'You' : h3.innerText = author;
-   const div = document.createElement("div");
-   div.classList.add('message__content');
-   div.innerText = content;
+    if (author === userName) {
+        message.classList.add('message--self');
+    }
+    const h3 = document.createElement("h3");
+    h3.classList.add('message__author');
+    author === userName ? h3.innerText = 'You' : h3.innerText = author;
+    const div = document.createElement("div");
+    div.classList.add('message__content');
+    div.innerText = content;
 
-   message.appendChild(h3);
-   message.appendChild(div);
-   messagesList.appendChild(message)
+    message.appendChild(h3);
+    message.appendChild(div);
+    messagesList.appendChild(message)
 }
 
 loginForm.addEventListener('submit', login);
